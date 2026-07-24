@@ -1,30 +1,19 @@
-import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom'
+import MainLayout from './components/MainLayout.jsx'
+import Accueil from './pages/Accueil.jsx'
+import About from './pages/About.jsx'
+import Logement from './pages/Logement.jsx'
+import Error404 from './pages/Error404.jsx'
 
-function App() {
-  const monsteraPrice = 8;
-  const [somme, updateSomme] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
-
-  const plantList = [
-    'monstera',
-    'ficus lyrata',
-    'pothos argenté',
-    'yucca',
-    'palmier',
-  ];
-  return isOpen ? (
-    <div className="lmj-cart">
-      <h2>Panier</h2>
-      <div>
-        Monstera : {monsteraPrice}€ --
-        <button onClick={() => updateSomme(somme + 1)}>Ajouter</button>
-        --
-        <button onClick={() => updateSomme(0)}>Vider</button>
-      </div>
-      <h3>Total : {monsteraPrice * somme}€</h3>
-    </div>
-  ) : (
-    <button onClick={() => setIsOpen(true)}>Ouvrir le Panier</button>
-  );
+export default function App() {
+  return (
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/a-propos" element={<About />} />
+        <Route path="/logement/:id" element={<Logement />} />
+        <Route path="*" element={<Error404 />} />
+      </Route>
+    </Routes>
+  )
 }
-export default App;
