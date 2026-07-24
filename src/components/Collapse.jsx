@@ -1,0 +1,26 @@
+import { useState } from 'react'
+import { ChevronUp } from 'lucide-react'
+
+const Collapse = ({ title, children }) => {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <section className={`collapse ${open ? ' collapse--open' : ''}`}>
+      <button className="collapse__button" type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open} >
+        <span>{title}</span>
+        <ChevronUp
+          size={32}
+          className={`collapse__chevron ${open ? 'collapse__chevron--open' : ''}`}
+          aria-hidden="true"
+        />
+      </button>
+
+      <div className="collapse__body" hidden={!open}>
+        {children}
+      </div>
+    </section>
+  )
+}
+export default Collapse

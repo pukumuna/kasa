@@ -143,6 +143,52 @@ img {
   transform: scale(1.03);
 }
 
+.collapse {
+  width: 100%;
+}
+
+.collapse .collapse__button {
+    width: 100%;
+    min-height: 52px;
+    border: 0;
+    border-radius: 5px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background: #ff6060;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+.collapse .collapse__chevron {
+    font-size: 30px;
+    transition: transform .2s ease;
+  }
+
+.collapse .collapse--open .collapse__chevron {
+    transform: rotate(180deg);
+  }
+
+.collapse .collapse__body {
+    min-height: 120px;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    background: #f6f6f6;
+    font-size: 18px;
+    line-height: 1.45;
+}
+.collapse .collapse__body  p {
+      margin: 0;
+}
+
+.equipment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .about {
   width: min(1023px, 100%);
   margin: 38px auto 0;
