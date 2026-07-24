@@ -1,0 +1,45 @@
+.banner {
+    width: 100%;
+    min-height: 223px;
+    border-radius: 25px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 20px;
+
+    h1 {
+        margin: 0;
+
+        color: white;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.4;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner {
+        min-height: 111px;
+        border-radius: 10px;
+
+        justify-content: flex-start;
+
+        padding: 16px;
+
+        h1 {
+            max-width: 220px;
+
+            font-size: 24px;
+            line-height: 1;
+            text-align: left;
+        }
+    }
+}

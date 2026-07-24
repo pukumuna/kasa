@@ -1,17 +1,14 @@
- 
+import Banner from '../components/Banner.jsx'
+import Galerie from '../components/Galerie.jsx'
+import { locationsData } from '../data/locations.js'
+import homeBanner from '../assets/home_banner.jpg'
 
-import { Link } from 'react-router-dom'
-
-export default function Accueil() {
+const Accueil = () => {
   return (
-    <section>
-      <h1>Page d'accueil</h1>
-
-      <p>Bienvenue sur la version minimale de Kasa.</p>
-
-      <Link to="/logement/123">
-        Voir le logement numéro 123
-      </Link>
-    </section>
+    <>
+      <Banner image={homeBanner} title="Chez vous, partout et ailleurs" />
+      <Galerie locations={locationsData} />
+    </>
   )
 }
+export default Accueil
