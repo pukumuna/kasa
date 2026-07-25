@@ -143,6 +143,7 @@ img {
   transform: scale(1.03);
 }
 
+<<<<<<< HEAD
 .carousel {
   position: relative;
   height: 415px;
@@ -324,12 +325,69 @@ img {
 .collapse__content--open .collapse__content-inner {
     opacity: 1;
 }
+=======
+.collapse {
+  width: 100%;
+}
+
+.collapse .collapse__button {
+    width: 100%;
+    min-height: 52px;
+    border: 0;
+    border-radius: 5px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background: #ff6060;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+.collapse .collapse__chevron {
+    font-size: 30px;
+    transition: transform .2s ease;
+  }
+
+.collapse .collapse--open .collapse__chevron {
+    transform: rotate(180deg);
+  }
+
+.collapse .collapse__body {
+    min-height: 120px;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    background: #f6f6f6;
+    font-size: 18px;
+    line-height: 1.45;
+}
+.collapse .collapse__body  p {
+      margin: 0;
+}
+.carousel {
+    height: 255px;
+    border-radius: 10px;
+  }
+  .carousel__arrow {
+    padding-inline: 6px;
+    font-size: 52px;
+  }
+  .carousel__counter {
+    display: none;
+  }
+
+>>>>>>> 6f21324a53620c4f761d5e352b58394b8791b794
 .equipment-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f21324a53620c4f761d5e352b58394b8791b794
 .about {
   width: min(1023px, 100%);
   margin: 38px auto 0;

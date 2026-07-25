@@ -1,6 +1,9 @@
 import { Navigate, useParams } from 'react-router-dom'
 import Carousel from '../components/Carousel.jsx'
+<<<<<<< HEAD
 import Collapse from '../components/Collapse.jsx'
+=======
+>>>>>>> 6f21324a53620c4f761d5e352b58394b8791b794
 import Rating from '../components/Rating.jsx'
 import { locationsData } from '../data/locations.js'
 
@@ -43,6 +46,7 @@ const Logement = () => {
           <Rating value={location.rating} />
         </div>
       </div>
+<<<<<<< HEAD
 
       <div className="housing__details">
         <Collapse title="Description">
@@ -57,6 +61,9 @@ const Logement = () => {
           </ul>
         </Collapse>
       </div>
+=======
+      
+>>>>>>> 6f21324a53620c4f761d5e352b58394b8791b794
     </article>
   )
 }
