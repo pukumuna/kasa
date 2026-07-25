@@ -183,6 +183,17 @@ img {
 .collapse .collapse__body  p {
       margin: 0;
 }
+.carousel {
+    height: 255px;
+    border-radius: 10px;
+  }
+  .carousel__arrow {
+    padding-inline: 6px;
+    font-size: 52px;
+  }
+  .carousel__counter {
+    display: none;
+  }
 
 .equipment-list {
   margin: 0;
