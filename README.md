@@ -1,10 +1,10 @@
-# Shiny - Dashboard d'agence avec React Router
+# Kasa - Dashboard d'agence avec React Router
 
 Application de base pour le cours React Router.
 
 ## Description
 
-Ceci est l'application de départ pour apprendre React Router. Tous les composants d'interface et les pages sont déjà créés et stylisés pour l'agence Shiny. Votre objectif est de vous concentrer uniquement sur l'apprentissage et l'implémentation de React Router.
+Ceci est l'application de départ pour apprendre React Router. Tous les composants d'interface et les pages sont déjà créés et stylisés pour l'agence Kasa. Votre objectif est de vous concentrer uniquement sur l'apprentissage et l'implémentation de React Router.
 
 **Votre objectif** : Transformer cette application en Single Page Application (SPA) en utilisant React Router, sans avoir à vous soucier de la création des composants d'interface.
 
@@ -64,11 +64,11 @@ src/
 
 Toutes les pages sont déjà créées avec leurs styles :
 
-- **Home** (`/pages/Home`) : Dashboard affichant un aperçu des projets récents et de l'équipe Shiny
-- **Projects** (`/pages/Projects`) : Liste complète des projets Shiny
+- **Home** (`/pages/Home`) : Dashboard affichant un aperçu des projets récents et de l'équipe Kasa
+- **Projects** (`/pages/Projects`) : Liste complète des projets Kasa
 - **Employees** (`/pages/Employees`) : Liste complète des employés de l'agence
 - **EmployeeDetail** (`/pages/EmployeeDetail`) : Détail d'un employé avec biographie, contact et compétences
-- **About** (`/pages/About`) : Page à propos de l'agence Shiny
+- **About** (`/pages/About`) : Page à propos de l'agence Kasa
 - **Error** (`/pages/Error`) : Page 404 pour les routes inexistantes
 
 ### Composants réutilisables

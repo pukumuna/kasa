@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fff;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header,   /* les 2 avec footer font partie de div app au dessus */
+.main-content {
+  width: min(100% - 40px, 1240px);
+  margin-inline: auto;
+}
+
+.header {
+  min-height: 163px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo-link {
+  text-decoration: none;
+}
+.header__nav {
+  display: flex;
+  gap: 57px;
+}
+.header__link {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+.header__link--active {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  color: #ff6060;
+  font-size: 54px;
+  font-weight: 500;
+  letter-spacing: -5px;
+}
+.logo--footer {
+  color: #fff;
+  font-size: 34px;
+  letter-spacing: -3px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.banner {
+  min-height: 223px;
+  border-radius: 25px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+}
+.banner h1 {
+  margin: 0;
+  color: #fff;
+  /*font-size: clamp(32px, 4vw, 48px); */
+  font-size:48px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.gallery {
+  margin-top: 43px;
+  padding: 56px 50px;
+  border-radius: 25px;
+  background: #f6f6f6;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 50px 60px;
+}
+
+.card {
+  min-width: 0;
+}
+.card__link {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 45%, rgba(0, 0, 0, 0.75));
+}
+.card__title {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 16px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.45;
+}
+.card:hover .card__image {
+  transform: scale(1.03);
+}
+
+.carousel {
+  position: relative;
+  height: 415px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  border: 0;
+  padding: 0 20px 12px;
+  color: #fff;
+  background: transparent;
+  font-size: 110px;
+  line-height: 1;
+  cursor: pointer;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.carousel__arrow--left {
+  left: 0;
+}
+.carousel__arrow--right {
+  right: 0;
+}
+.carousel__counter {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  translate: -50% 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.housing__summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 24px;
+}
+.housing__identity h1 {
+  margin: 0;
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: 500;
+}
+.housing__identity p {
+  margin: 8px 0 20px;
+  font-size: 18px;
+}
+.housing__host-rating {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+.housing__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 76px;
+  margin-top: 24px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tags li {
+  min-width: 115px;
+  padding: 5px 18px;
+  border-radius: 12px;
+  color: #fff;
+  background: #ff6060;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.host p {
+  margin: 0;
+  color: #ff6060;
+  text-align: right;
+  line-height: 1.4;
+}
+.host p span {
+  display: block;
+}
+.host img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rating {
+  display: flex;
+  gap: 8px;
+}
+.rating__star {
+  color: #e3e3e3;
+  font-size: 30px;
+}
+.rating__star--active {
+  color: #ff6060;
+}
+
+.collapse {
+  width: 100%;
+}
+.collapse__button {
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  border-radius: 5px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background: #ff6060;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.collapse__chevron {
+  font-size: 30px;
+  transition: transform 0.2s ease;
+}
+.collapse--open .collapse__chevron {
+  transform: rotate(180deg);
+}
+.collapse__body {
+  min-height: 120px;
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+  background: #f6f6f6;
+  font-size: 18px;
+  line-height: 1.45;
+}
+.collapse__body p {
+  margin: 0;
+}
+.collapse__content {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.collapse__content-inner {
+    opacity: 0;
+
+    transition:
+        opacity .20s ease .20s;
+}
+.collapse__content--open {
+    max-height: 500px;
+
+    transition:
+    max-height .350s ease,
+    opacity .30s ease .15s;
+}
+
+.collapse__content--open .collapse__content-inner {
+    opacity: 1;
+}
+.equipment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about {
+  width: min(1023px, 100%);
+  margin: 38px auto 0;
+  display: grid;
+  gap: 30px;
+}
+
+.error-page {
+  min-height: 650px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 55px;
+  text-align: center;
+  color: #ff6060;
+}
+.error-page h1 {
+  margin: 0;
+  font-size: clamp(120px, 20vw, 288px);
+  line-height: 0.85;
+}
+.error-page p {
+  margin: 0;
+  font-size: 36px;
+}
+.error-page a {
+  color: #000;
+  font-size: 18px;
+}
+
+.footer {
+  min-height: 209px;
+  margin-top: 50px;
+  padding: 45px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #000;
+  text-align: center;
+}
+.footer p {
+  margin: 24px 0 0;
+  font-size: 24px;
+}
