@@ -6,22 +6,22 @@ import { locationsData } from '../data/locations.js'
 
 const Logement = () => {
   const { id } = useParams()
-  const location = locationsData.find((item) => item.id === id)
+  const location = locationsData.find((element) => element.id === id)
 
   if (!location) {
     return <Navigate to="/404" replace />
   }
 
-  const hostParts = location.host.name.split(' ')
-  const hostFirstName = hostParts.shift()
-  const hostLastName = hostParts.join(' ')
+  const hostName = location.host.name.split(' ')
+  const hostFirstName = hostName.shift()
+  const hostLastName = hostName.join(' ')
 
   return (
-    <article className="housing">
+    <article className="location">
       <Carousel pictures={location.pictures} title={location.title} />
 
-      <div className="housing__summary">
-        <div className="housing__identity">
+      <div className="location__summary">
+        <div className="loaction__identity">
           <h1>{location.title}</h1>
           <p>{location.location}</p>
 
@@ -32,7 +32,7 @@ const Logement = () => {
           </ul>
         </div>
 
-        <div className="housing__host-rating">
+        <div className="location__host-rating">
           <div className="host">
             <p>
               <span>{hostFirstName}</span>
@@ -40,11 +40,11 @@ const Logement = () => {
             </p>
             <img src={location.host.picture} alt={`Portrait de ${location.host.name}`} />
           </div>
-          <Rating value={location.rating} />
+          <Rating etoiles={location.rating} />
         </div>
       </div>
 
-      <div className="housing__details">
+      <div className="location__details">
         <Collapse title="Description">
           <p>{location.description}</p>
         </Collapse>

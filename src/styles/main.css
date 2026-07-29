@@ -24,7 +24,7 @@ img {
   max-width: 100%;
 }
 
-.app {
+.app { /* MainLayout */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -186,23 +186,23 @@ img {
   font-weight: 500;
 }
 
-.housing__summary {
+.location__summary {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   padding-top: 24px;
 }
-.housing__identity h1 {
+.location__identity h1 {
   margin: 0;
   color: #ff6060;
   font-size: 36px;
   font-weight: 500;
 }
-.housing__identity p {
+.location__identity p {
   margin: 8px 0 20px;
   font-size: 18px;
 }
-.housing__host-rating {
+.location__host-rating {
   min-width: 200px;
   display: flex;
   flex-direction: column;
@@ -210,7 +210,7 @@ img {
   justify-content: space-between;
   gap: 20px;
 }
-.housing__details {
+.location__details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 76px;
@@ -257,15 +257,15 @@ img {
   object-fit: cover;
 }
 
-.rating {
+.nbEtoiles {
   display: flex;
   gap: 8px;
 }
-.rating__star {
+.nbEtoiles__star {
   color: #e3e3e3;
   font-size: 30px;
 }
-.rating__star--active {
+.nbEtoiles__star--active {
   color: #ff6060;
 }
 
@@ -326,7 +326,7 @@ img {
 }
 
 .equipment-list {
-  margin: 0;
+  margin-top: 17px;
   padding: 0;
   list-style: none;
 }
@@ -382,7 +382,7 @@ img {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
-  .housing__details {
+  .location__details {
     gap: 30px;
   }
 }
@@ -439,15 +439,15 @@ img {
   .carousel__counter {
     display: none;
   }
-  .housing__summary {
+  .location__summary {
     display: block;
     padding-top: 15px;
   }
-  .housing__identity h1 {
+  .location__identity h1 {
     font-size: 18px;
     line-height: 1.45;
   }
-  .housing__identity p {
+  .location__identity p {
     margin: 5px 0 10px;
     font-size: 14px;
   }
@@ -455,7 +455,7 @@ img {
     min-width: 84px;
     font-size: 10px;
   }
-  .housing__host-rating {
+  .location__host-rating {
     min-width: 0;
     margin-top: 16px;
     flex-direction: row-reverse;
@@ -471,7 +471,7 @@ img {
   .rating__star {
     font-size: 18px;
   }
-  .housing__details {
+  .location__details {
     grid-template-columns: 1fr;
     gap: 20px;
     margin-top: 16px;

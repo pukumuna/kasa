@@ -1,23 +1,23 @@
 import { useState } from 'react'
 
 export default function Carousel({ pictures, title }) {
-  const [current, setCurrent] = useState(0)
-  const hasSeveral = pictures.length > 1
-
+  const [indice, setIndice] = useState(0)
+  const plusieurs = pictures.length > 1
+  //Valeur initiale de index = 0 :
   const previous = () => {
-    setCurrent((index) => (index === 0 ? pictures.length - 1 : index - 1))}
+    setIndice((index) => (index === 0 ? pictures.length - 1 : index - 1))}
 
   const next = () => {
-    setCurrent((index) => (index === pictures.length - 1 ? 0 : index + 1))}
+    setIndice((index) => (index === pictures.length - 1 ? 0 : index + 1))}
 
   return (
     <section className="carousel" aria-label={`Photos de ${title}`}>
-      <img src={pictures[current]}
-        alt={`${title} — photo ${current + 1} sur ${pictures.length}`}
+      <img src={pictures[indice]}
+        alt={`${title} — photo ${indice + 1} sur ${pictures.length}`}
         className="carousel__image"
       />
 
-      {hasSeveral && (
+      {plusieurs && (
         <>
           <button className="carousel__arrow carousel__arrow--left" onClick={previous} 
                   aria-label="Photo précédente">
@@ -27,7 +27,7 @@ export default function Carousel({ pictures, title }) {
                   aria-label="Photo suivante">
             ›
           </button>
-          <span className="carousel__counter">{current + 1}/{pictures.length}</span>
+          <span className="carousel__counter">{indice + 1}/{pictures.length}</span>
         </>
       )}
     </section>

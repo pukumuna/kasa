@@ -8,10 +8,9 @@ export default function Header() {
 
   return (
     <header className="header">
-      <NavLink to="/" className="header__logo-link" aria-label="Retour à l'accueil">
-        <Logo srcLogo={headerLogo} />
-      </NavLink>
-
+       
+      <Logo srcLogo={headerLogo} />
+      
       <nav className="header__nav" aria-label="Navigation principale">
         <NavLink to="/" end className={lienActif}>
           Accueil

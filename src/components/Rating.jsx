@@ -1,12 +1,12 @@
-export default function Rating({ value }) {
-  const rating = Number(value)
+export default function Rating({ etoiles }) {
+  const nombre = Number(etoiles)
 
   return (
-    <div className="rating" aria-label={`Note : ${rating} sur 5`}>
+    <div className="nbEtoiles" aria-label={`Note : ${nombre} sur 5`}>
       {[1, 2, 3, 4, 5].map((star) => (
         <span
           key={star}
-          className={`rating__star${star <= rating ? ' rating__star--active' : ''}`}
+          className={`nbEtoiles__star${star <= nombre ? ' nbEtoiles__star--active' : ''}`}
           aria-hidden="true"
         >
           ★
