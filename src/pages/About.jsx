@@ -2,7 +2,7 @@ import Banner from '../components/Banner.jsx'
 import Collapse from '../components/Collapse.jsx'
 import aboutBanner from '../assets/about_banner.jpg'
 
-const values = [
+const nosValeurs = [
   {
     title: 'Fiabilité',
     content:
@@ -30,9 +30,9 @@ export default function About() {
     <>
       <Banner image={aboutBanner} />
       <div className="about">
-        {values.map((value) => (
-          <Collapse key={value.title} title={value.title}>
-            <p>{value.content}</p>
+        {nosValeurs.map((valeur) => (
+          <Collapse key={valeur.title} title={valeur.title}>
+            <p>{valeur.content}</p>
           </Collapse>
         ))}
       </div>

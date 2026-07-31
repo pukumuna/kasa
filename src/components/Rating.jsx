@@ -6,7 +6,7 @@ export default function Rating({ etoiles }) {
       {[1, 2, 3, 4, 5].map((star) => (
         <span
           key={star}
-          className={`nbEtoiles__star${star <= nombre ? ' nbEtoiles__star--active' : ''}`}
+          className={`nbEtoiles__star ${star <= nombre ? ' nbEtoiles__star--active' : ''}`}
           aria-hidden="true"
         >
           ★

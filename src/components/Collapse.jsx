@@ -7,11 +7,9 @@ const Collapse = ({ title, children }) => {
   return (
     <section className={`collapse ${open ? ' collapse--open' : ''}`}>
       <button className="collapse__button" type="button"
-        onClick={() => setOpen((value) => !value)}
-        aria-expanded={open} >
+        onClick={() => setOpen((value) => !value)} aria-expanded={open} >
         <span>{title}</span>
-        <ChevronUp
-          size={32}
+        <ChevronUp size={32}
           className={`collapse__chevron ${open ? 'collapse__chevron--open' : ''}`}
           aria-hidden="true"
         />
@@ -21,7 +19,7 @@ const Collapse = ({ title, children }) => {
         <div className="collapse__content-inner">
             {children}
         </div>
-    </div>
+      </div>
     </section>
   )
 }
